@@ -36,7 +36,6 @@ def collect_data(query):
             int((i / 50) + 1)) + '&u=%2Fnetahtml%2FPTO%2Fsearch' \
                                  '-bool.html&r=' + str(
             i) + '&f=G&l=50&co1=AND&d=PTXT&s1=' + query + '.ABTX.&OS=ABST/' + query + '&RS=ABST/' + query
-        print(url)
         headers = {'user-agent': 'my-app/0.0.1'}
         page = requests.get(url, timeout=5, headers=headers)
         soup = BeautifulSoup(page.text, 'html.parser')
